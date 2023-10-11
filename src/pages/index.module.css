@@ -1,0 +1,91 @@
+.body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.h1 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+.bannerContainer {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  width: 100%;
+}
+
+.bannerImage {
+	width: 100%; /* You can adjust this based on your design needs */
+	height: auto;
+  object-fit: cover;
+}
+
+.bannerTitle {
+	position: absolute;
+	color: deepskyblue; /* Adjust as needed */
+	font-size: 5rem; /* Adjust size as needed */
+	text-align: center;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* This adds a shadow to make text more readable on images */
+  -webkit-text-stroke: 1px white;
+  text-stroke: 1px white;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh; /* This ensures the container takes up the full viewport height */
+}
+
+.pageText { /* Assuming this class is assigned to the text content underneath the banner */
+  text-align: center;
+}
+
+/* General Styles */
+.markdownContent {
+  font-family: 'Arial', sans-serif; /* This is just an example. You can use any font family you prefer. */
+  padding: 20px;
+  line-height: 1.5;
+}
+
+/* Header Styles */
+.markdownContent h1 {
+  font-size: 2.5rem;
+  color: deepskyblue; /* Giving h1 a standout color */
+  margin-bottom: 15px;
+  border-bottom: 3px solid deepskyblue;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.markdownContent h2 {
+  font-size: 2rem;
+  color: #333; /* Darker shade for subheadings */
+  margin: 20px 0; /* Adding top and bottom margin */
+}
+
+.markdownContent h3 {
+  font-size: 1.5rem;
+  color: #555; /* Even lighter for the smallest subheading */
+  margin: 15px 0;
+  font-style: italic; /* A bit of style for smaller subheadings */
+}
+
+/* Bold Text Styles */
+.markdownContent strong {
+  background-color: #fff0f5; /* A soft pink background highlight */
+  padding: 2px 5px; /* Little padding to make it look like a tag/label */
+  border-radius: 3px;
+}
+

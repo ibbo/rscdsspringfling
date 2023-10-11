@@ -39,5 +39,22 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `https://admin.rscdsspringfling2024.co.uk`,
+      	accessToken: `5a7d3566f5dab4bfa35343f68ecad7d983c7c8abf009dab72350b0c3fa399d8067d8111e9c1a722e4ed06cb3b2eb4e54dd6598c1d566badfa34fa5983a74c7ea788d2d29bd88b53493f101c2a8ff1d493defc3d977f52bfa50ada783c176ef6c12f3bbb6b23cd21d2eb35d53f00531f071986d765b169e7be6129f50dbcc6e85`, 
+        queryLimit: 1000,
+        collectionTypes: [`dance-class`],
+	      singleTypes: [`homepage`],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `uploads`,
+        path: `${__dirname}/src/images/strapi-uploads/`,
+      },
+    },
   ],
 }
