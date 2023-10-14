@@ -12,7 +12,7 @@ const Navigation = () => {
             <Link to="/pricing" className={styles.navLink}>Pricing</Link>
             <Link to="/how-to-get-there" className={styles.navLink}>How to Get There</Link>
             <Link to="/spring-fringe" className={styles.navLink}>Spring Fringe</Link>
-            <Link to="/contact" className={styles.navLink}>Contact/FAQ</Link>
+            <Link to="/contact-faq" className={styles.navLink}>Contact/FAQ</Link>
           </nav>
         );
 }

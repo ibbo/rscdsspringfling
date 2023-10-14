@@ -9,6 +9,7 @@
   color: #2c3e50;
   border-bottom: 2px solid #3498db;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 .p {
@@ -26,8 +27,11 @@
 
 .bannerImage {
 	width: 100%; /* You can adjust this based on your design needs */
+  max-width: 1000px;
 	height: auto;
   object-fit: cover;
+  align-items: center;
+  justify-content: center;
 }
 
 .bannerTitle {
@@ -89,3 +93,18 @@
   border-radius: 3px;
 }
 
+.accommodation {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  gap: 2rem;
+}
+.accommodationInfo {
+  flex: 1;
+  max-width: 60%;
+}
+
+.accommodationImage {
+  width: 30%;
+  height: auto;
+}

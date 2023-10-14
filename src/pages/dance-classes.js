@@ -39,12 +39,14 @@ const DanceClasses = ({ data }) => {
   return (
     <Layout>
       <div className={styles.bannerContainer}>
-        <h1>Dance Classes</h1>
+        <h1 className={styles.h1}>Dance Classes</h1>
+      </div>
+      <div className={styles.bannerImage}>
+      <GatsbyImage image={classes[0].node.Image[0].localFile.childImageSharp.gatsbyImageData} alt="" />
       </div>
       <ul>
         {classes.map(danceClass => (
           <div>
-          <GatsbyImage image={danceClass.node.Image[0].localFile.childImageSharp.gatsbyImageData} alt="" className={styles.bannerImage} />
           <li key={danceClass.node.id}>
             <h2>{danceClass.node.Title}</h2>
             <p>Teacher: {danceClass.node.Teacher}</p>
