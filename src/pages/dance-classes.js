@@ -1,8 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import { GatsbyImage } from "gatsby-plugin-image";
 import * as styles from "./index.module.css";
+import ClassCard from "../components/ClassCard";
 
 export const query = graphql`
   query {
@@ -34,29 +34,22 @@ export const query = graphql`
 
 
 const DanceClasses = ({ data }) => {
+  console.log(data);
   const classes = data.allStrapiDanceClass.edges;
-
+  console.log(classes);
   return (
     <Layout>
       <div className={styles.bannerContainer}>
         <h1 className={styles.h1}>Dance Classes</h1>
       </div>
       <div className={styles.bannerImage}>
-      <GatsbyImage image={classes[0].node.Image[0].localFile.childImageSharp.gatsbyImageData} alt="" />
       </div>
-      <ul>
-        {classes.map(danceClass => (
-          <div>
-          <li key={danceClass.node.id}>
-            <h2>{danceClass.node.Title}</h2>
-            <p>Teacher: {danceClass.node.Teacher}</p>
-            <p>Musician: {danceClass.node.Musician}</p>
-            <p>Time: {danceClass.node.Time}</p>
-            <p>{danceClass.node.Description.data.Description}</p>
-          </li>
-          </div>
-        ))}
-      </ul>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+        {classes.map(danceClass => {
+          console.log(danceClass);
+          return <ClassCard key={danceClass.node.id} danceClass={danceClass.node} />;
+        })}
+        </div>
     </Layout>
   );
 };

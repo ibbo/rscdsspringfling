@@ -1,10 +1,27 @@
 .navbar {
-  display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 1rem 2rem;
   background-color: #3498db;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100vh; /* Take up full viewport height */
+  display: none; /* Hide by default */
+}
+
+.navbar.open {
+  display: flex; /* Show when the menu is open */
+}
+
+.menuButton {
+  display: flex; /* Hide for larger screens */
+}
+
+.hamburger {
+  display: none; /* hidden by default */
+  font-size: 30px; /* size of hamburger icon */
+  cursor: pointer;
 }
 
 .navLink {
@@ -12,9 +29,39 @@
   color: #333;
   padding: 0.5rem 1rem;
   transition: color 0.3s;
+  font-size: larger;
 }
 
 .navLink:hover {
   color: deepskyblue;
 }
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* show hamburger icon on smaller screens */
+  }
 
+  .navbar {
+    flex-direction: column;
+    width: 100%; /* full width */
+    text-align: center; /* center links */
+  }
+
+  .navLink {
+    padding: 10px; /* more padding, for touch friendliness */
+    border-bottom: 1px solid #ddd; /* optional: border between links */
+  }
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .navbar {
+    display: flex; /* Show navbar */
+    flex-direction: row; /* Return to horizontal layout */
+    height: auto; /* Normal height */
+  }
+  
+  .menuButton {
+    display: none; /* Keep the menu button hidden */
+  }
+}

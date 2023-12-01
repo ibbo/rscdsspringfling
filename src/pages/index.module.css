@@ -41,7 +41,6 @@
 	text-align: center;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* This adds a shadow to make text more readable on images */
   -webkit-text-stroke: 1px white;
-  text-stroke: 1px white;
 }
 
 .mainContainer {
@@ -92,6 +91,51 @@
   padding: 2px 5px; /* Little padding to make it look like a tag/label */
   border-radius: 3px;
 }
+
+/* Unordered Lists */
+.markdownContent ul {
+  padding-left: 20px; /* Indentation for the entire list */
+  margin-bottom: 20px; /* Space between the list and the content that follows it */
+}
+
+.markdownContent ul li {
+  list-style-type: none; /* Remove default bullets */
+  position: relative; /* Needed for custom bullets */
+  padding-left: 30px; /* Space for custom bullet */
+  margin-bottom: 10px; /* Space between list items */
+  line-height: 1.6; /* Adjusting the line height for readability */
+}
+
+.markdownContent ul li:before {
+  content: ''; /* Empty content */
+  position: absolute;
+  left: 0; /* Positioning the bullet */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: deepskyblue; /* Custom bullet color */
+  border-radius: 50%; /* Making the bullet round */
+}
+
+/* Ordered Lists */
+.markdownContent ol {
+  padding-left: 20px; /* Indentation for the entire list */
+  margin-bottom: 20px; /* Space between the list and the content that follows it */
+}
+
+.markdownContent ol li {
+  margin-bottom: 10px; /* Space between list items */
+  line-height: 1.6; /* Adjusting the line height for readability */
+}
+
+/* Hover effect for list items */
+.markdownContent li:hover {
+  color: deepskyblue; /* Text color on hover */
+  cursor: pointer; /* Changing the cursor on hover (optional, if the list items are links or need to indicate interactivity) */
+}
+
+
 
 .accommodation {
   display: flex;
