@@ -43,6 +43,12 @@
   -webkit-text-stroke: 1px white;
 }
 
+@media (max-width: 768px) {
+  .bannerTitle {
+    font-size: 2rem;
+  }
+}
+
 .mainContainer {
   display: flex;
   flex-direction: column;
