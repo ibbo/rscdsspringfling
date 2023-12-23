@@ -12,14 +12,12 @@ const ContactFAQPage = ({ data }) => {
 
   return (
     <Layout>
-    <div className={styles.accommodation}>
-      <div className={styles.accommodationInfo}>
+      <div>
         <h1 className={styles.h1}>{title}</h1>
         <div className={styles.markdownContent}>
-            <ReactMarkdown className={styles.pageText} children={description} />
+            <ReactMarkdown children={description} />
         </div>
       </div>
-    </div>
     </Layout>
   );
 }
