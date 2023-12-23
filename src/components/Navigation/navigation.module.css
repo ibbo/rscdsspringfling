@@ -2,7 +2,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #3498db;
+  background-color: #2e67a0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   flex-direction: column;
   overflow-y: auto;
@@ -33,7 +33,7 @@
 }
 
 .navLink:hover {
-  color: deepskyblue;
+  color: #4699ed;
 }
 /* Media query for smaller screens */
 @media (max-width: 768px) {

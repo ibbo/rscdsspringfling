@@ -15,6 +15,7 @@
 .p {
   color: #7f8c8d;
   line-height: 1.6;
+  text-align: center;
 }
 
 .bannerContainer {
@@ -36,7 +37,7 @@
 
 .bannerTitle {
 	position: absolute;
-	color: deepskyblue; /* Adjust as needed */
+	color: #2e67a0; /* Adjust as needed */
 	font-size: 5rem; /* Adjust size as needed */
 	text-align: center;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* This adds a shadow to make text more readable on images */
@@ -66,14 +67,15 @@
   font-family: 'Arial', sans-serif; /* This is just an example. You can use any font family you prefer. */
   padding: 20px;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* Header Styles */
 .markdownContent h1 {
   font-size: 2.5rem;
-  color: deepskyblue; /* Giving h1 a standout color */
+  color: #2e67a0; /* Giving h1 a standout color */
   margin-bottom: 15px;
-  border-bottom: 3px solid deepskyblue;
+  border-bottom: 3px solid #2e67a0;
   display: inline-block;
   padding-bottom: 10px;
 }
@@ -120,7 +122,7 @@
   transform: translateY(-50%);
   width: 8px;
   height: 8px;
-  background-color: deepskyblue; /* Custom bullet color */
+  background-color: #2e67a0; /* Custom bullet color */
   border-radius: 50%; /* Making the bullet round */
 }
 
@@ -137,11 +139,15 @@
 
 /* Hover effect for list items */
 .markdownContent li:hover {
-  color: deepskyblue; /* Text color on hover */
+  color: #2e67a0; /* Text color on hover */
   cursor: pointer; /* Changing the cursor on hover (optional, if the list items are links or need to indicate interactivity) */
 }
 
-
+.markdownContent p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .accommodation {
   display: flex;
